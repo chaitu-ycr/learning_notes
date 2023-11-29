@@ -2,9 +2,9 @@
 
 * Communication Access Programming Language (CAPL) allows programming of network node models as well as special evaluation programs for individual applications.
 * The functional range of CANoe includes a CAPL compiler which compiles a created CAPL file with the extension *.CAN to an executable program file with the extension *.CBF.
-* CAPL programs can be used to analyze/simulate specific message or signal data.
+* CAPL programs can be used to analyze/simulate network data.
 * CAPL program can be used to simulate the rest of the network.
-* CAPL program can be used to do automation of test cases.
+* CAPL program can be used to automate test cases.
 
 ## Prerequisites for CAPL programming
 
@@ -39,8 +39,8 @@
 * dword (unsigned, 4 Byte)
 * int (signed, 2 Byte)
 * long (signed, 4 Byte)
-* int64(signed, 8 Byte)
-* qword(unsigned, 8 Byte)
+* int64 (signed, 8 Byte)
+* qword (unsigned, 8 Byte)
 
 #### Individual character
 
@@ -78,9 +78,9 @@ With associative fields (so-called maps) you can perform a 1:1 assignment of val
 An associative field is declared in a similar way to a normal field but the data type of the key is written in square brackets:
 
 ```c
-int m[float];         // maps floats to ints
-float x[int64];       // maps int64s to floats
-char[30] s[ char[] ]  // maps strings (of unspecified length) to strings of length < 30
+int m[float];         // maps float to int
+float x[int64];       // maps int64 to float
+char[30] s[ char[] ]  // maps string (of unspecified length) to string of length < 30
 ```
 
 Data types for the keys can be long, int64, float, double, enumeration types and char[]. As data type for values are simple data types, enumeration types fields and structure types allowed. You cannot use associative fields themselves as the value type of an associative field.
@@ -88,11 +88,11 @@ Data types for the keys can be long, int64, float, double, enumeration types and
 ### Objects
 
 * message and multiplexed_message
+* signal
+* sysVar, sysVarInt, sysVarFloat, sysVarString, sysVarIntArray, sysVarFloatArray, sysVarData
+* timer and msTimer
 * diagRequest
 * diagResponse
-* signal
-* sysVar, sysvarInt, sysvarFloat, sysvarString, sysvarIntArray, sysvarFloatArray, sysvarData
-* Timer and msTimer
 
 ### Global Variables
 
@@ -178,7 +178,7 @@ on stopMeasurement
 * The timer variable can be accessed with the keyword this within the event procedure.
 * You would start a previously-defined timer with the function setTimer.
 * After the timer has elapsed, the associated on timer procedure is called. The maximum time is 2147483647 s (=596523.23h) for variables of the type timer and 2147483647 ms (= 2147483,647 s = 596,52h) for variables of the type msTimer. With the function cancelTimer you can stop a timer which has already been started and thereby prevent the associated on timer procedure from being called.
-* In CAPL exists the following variable types for timer:
+* In CAPL has the following type of timer's:
   * timer - timer based on seconds
   * msTimer - timer based on milliseconds
 
@@ -347,18 +347,18 @@ on envVar Switch
 The startLogging() and stopLogging() functions can be used to start and stop logging.
 
 ```c
-on key 'a'
+on key 'x'
 {
     startLogging();
-    write("Logging Started");
+    write("Started Logging...");
 }
 ```
 
 ```c
-on key 'b'
+on key 'y'
 {
     stopLogging();
-    write("Logging Stopped");
+    write("Stopped Logging...");
 }
 ```
 
@@ -371,7 +371,7 @@ on key 'b'
 ### Test Setup
 
 * The user-defined test setup is displayed graphically in this window.
-* All options for parameterizing the test environments are selected in this window.
+* All options to parameterize the test environments are selected in this window.
 
 ### Test Environment
 

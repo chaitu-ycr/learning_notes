@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "ecal_tool_notes"
+version = "0.0.1"
+description = "eCal Tool Learning Notes"
+authors = ["chaitu-ycr <chaitu.ycr@gmail.com>"]
+license = "LICENSE"
+readme = "README.md"
+homepage = "https://github.com/chaitu-ycr/ecal_tool_notes.git"
+repository = "https://github.com/chaitu-ycr/ecal_tool_notes.git"
+keywords = ["ecal", "python", "cpp", "tool", "learning", "notes"]
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: Software Development :: Embedded Systems"
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+ecal5 = {url = "https://github.com/eclipse-ecal/ecal/releases/download/v5.11.6/ecal5-5.11.6-cp39-cp39-win_amd64.whl"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

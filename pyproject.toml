@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "learning_notes"
+version = "0.0.1"
+description = "repo to store learning notes"
+authors = ["chaitu-ycr <chaitu.ycr@gmail.com>"]
+license = "LICENSE"
+readme = "README.md"
+homepage = "https://github.com/chaitu-ycr/learning_notes.git"
+repository = "https://github.com/chaitu-ycr/learning_notes.git"
+classifiers = [
+    "Programming Language :: Python :: 3.9",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Topic :: Software Development :: Embedded Systems"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+nicegui = "^1.4.3"
+pywin32 = "^306"
+pyinstaller = "^6.2.0"
+pywebview = "^4.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

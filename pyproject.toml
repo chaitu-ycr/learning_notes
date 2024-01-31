@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "learning_notes"
-version = "0.0.1"
-description = "repo to store learning notes"
+version = "0.0.2"
+description = "my learning notes repository"
 authors = ["chaitu-ycr <chaitu.ycr@gmail.com>"]
 license = "LICENSE"
 readme = "README.md"
@@ -15,11 +15,13 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.13"
+python = "3.9"
 nicegui = "^1.4.3"
 pywin32 = "^306"
 pyinstaller = "^6.2.0"
 pywebview = "^4.4.1"
+dash = "^2.14.2"
+pandas = "^2.1.3"
 
 [build-system]
 requires = ["poetry-core"]

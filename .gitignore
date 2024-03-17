@@ -222,3 +222,4 @@ dkms.conf
 # others
 _temp_data/
 .vscode/
+*.svg.bkp

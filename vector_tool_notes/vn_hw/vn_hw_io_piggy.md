@@ -26,6 +26,8 @@
 ![02_io_hw_config](./images/02_io_hw_config.png)
 ![03_io_connector_overview](./images/03_io_connector_overview.png)
 
-## verify IO: Environment  System Variables  System-Defined  IO  VN1600_1Use below Highlighted auto generated system variables for Analysis and Controlling.
+## Use below Highlighted auto generated system variables for Analysis and Controlling.
+
+👉 verify IO: Environment 👉 System Variables 👉 System-Defined 👉 IO 👉 VN1600_1
 
 ## Hardware setup block diagram for using VN1630 Digital Out

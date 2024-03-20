@@ -20,6 +20,9 @@ dash = "^2.16.1"
 pandas = "^2.2.1"
 ipykernel = "^6.29.3"
 pyinstaller = "^6.5.0"
+opencv-python = "^4.9.0.80"
+pillow = "^10.2.0"
+python-vlc = "^3.0.20123"
 
 [build-system]
 requires = ["poetry-core"]
